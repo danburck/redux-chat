@@ -1,14 +1,6 @@
-# redux-boilerplate
+# redux-chat
 
-Simple React + Redux starter with the following config:
-
-- React, ReactDOM
-- Redux, React-Redux
-- Webpack 3
-- Babel with es2015 and react presets
-- Bootstrap (css only, loaded from a cdn in `index.html`)
-- work with `.js` or `.jsx` files
-- main `application.scss` stylesheet is imported in `index.js` as a module to enjoy hot reloading
+[redux-chat](https://danburck.github.io/redux-chat/) is multi-channel chatroom like slack. I build this to have some fun with Redux.
 
 ## Features
 - On page load, the browser prompts me for a username
