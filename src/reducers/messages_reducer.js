@@ -1,9 +1,10 @@
-export default function (state = null, action) {
-  if (state === undefined) {
-    return [];
-  }
+import { FETCH_MESSAGES } from '../actions/index';
 
+export default function (state = null, action) {
   switch (action.type) {
+    case FETCH_MESSAGES: {
+      return action.payload.messages;
+    }
     default:
       return state;
   }
