@@ -29,7 +29,7 @@ class MessageForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="channel-editor">
         <input
           ref={(input) => { this.messageBox = input; }}
           type="text"
@@ -37,7 +37,7 @@ class MessageForm extends Component {
           value={this.state.value}
           onChange={this.handleChange}
         />
-        <input type="submit" />
+        <button type="submit">Send</button>
       </form>
     );
   }

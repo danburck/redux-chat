@@ -12,6 +12,7 @@ import '../assets/stylesheets/application.scss';
 
 // State and reducers
 import messagesReducer from './reducers/messages_reducer';
+import selectedChannelReducer from './reducers/selected_channel_reducer';
 
 const identityReducer = (state = null) => state;
 
@@ -27,7 +28,7 @@ const reducers = combineReducers({
   messages: messagesReducer,
   channels: identityReducer,
   currentUser: identityReducer,
-  selectedChannel: identityReducer
+  selectedChannel: selectedChannelReducer
 });
 
 // render an instance of the component in the DOM
@@ -39,6 +40,6 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('app')
 );
 

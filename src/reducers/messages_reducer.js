@@ -1,5 +1,4 @@
-import { FETCH_MESSAGES } from '../actions/index';
-import { CREATE_MESSAGE } from '../actions/index';
+import { FETCH_MESSAGES, CREATE_MESSAGE } from '../actions/index';
 
 export default function (state = null, action) {
   switch (action.type) {
