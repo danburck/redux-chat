@@ -7,8 +7,7 @@ export default function (state = null, action) {
       return action.payload.messages;
     }
     case CREATE_MESSAGE: {
-      const messages = state.messages;
-      const newMessages = messages.slice(0);
+      const newMessages = state.slice(0);
       newMessages.push(action.payload);
       return newMessages;
     }

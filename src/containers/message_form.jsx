@@ -10,11 +10,13 @@ class MessageForm extends Component {
     this.state = { value: '' };
   }
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
+    event.preventDefault();
     const channel = this.props.selectedChannel;
     const author = this.props.currentUser;
     const content = this.state.value;
     this.props.createMessage(channel, author, content);
+    this.setState({value: '' });
   }
 
   handleChange = (event) => {
@@ -25,7 +27,7 @@ class MessageForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input type="text" value={this.state.value} onChange={this.handleChange} />
-        <input type="submit" value="Submit" />
+        <input type="submit" />
       </form>
     );
   }
