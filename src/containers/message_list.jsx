@@ -8,7 +8,6 @@ import Message from '../components/message';
 class MessageList extends Component {
   componentWillMount() {
     this.props.fetchMessages(this.props.selectedChannel);
-    console.log('will mount and called fetchMessages(channel)');
   }
 
   render() {
