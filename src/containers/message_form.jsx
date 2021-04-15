@@ -10,13 +10,17 @@ class MessageForm extends Component {
     this.state = { value: '' };
   }
 
+  componentDidMount() {
+    this.messageBox.focus();
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
     const channel = this.props.selectedChannel;
     const author = this.props.currentUser;
     const content = this.state.value;
     this.props.createMessage(channel, author, content);
-    this.setState({value: '' });
+    this.setState({ value: '' });
   }
 
   handleChange = (event) => {
@@ -26,7 +30,13 @@ class MessageForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="text" value={this.state.value} onChange={this.handleChange} />
+        <input
+          ref={(input) => { this.messageBox = input; }}
+          type="text"
+          className="form-control"
+          value={this.state.value}
+          onChange={this.handleChange}
+        />
         <input type="submit" />
       </form>
     );
